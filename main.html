@@ -10,6 +10,19 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			let a = arr[0], b = arr[1];
+
+for( let i=2; i<arr.length; ++i){
+    let currentMax = a > b ? b : a;
+    let currentMin = a < b ? b : a;
+
+    if(currentMax > arr[i]){
+        a = currentMin;
+        b = arr[i];
+    }
+}
+
+console.log(a > b ? a : b);
 			
 		}
 
